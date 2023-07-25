@@ -1,0 +1,19 @@
+Random rand = new Random();
+int number;
+int sum = 0;
+
+number = rand.Next(0, 100);
+Console.WriteLine("Номер = " + number);
+while (sum < number)
+{
+    sum += 5;
+    Console.WriteLine(sum + " сумма кратных пяти");
+}
+if (sum > number)
+{
+    sum -= 5;
+    Console.WriteLine(sum + " сумма кратных пяти меньше числа");
+}
+sum += number;
+Console.WriteLine(sum + " итоговая сумма с прибавлением номера.");
+Console.ReadKey();
